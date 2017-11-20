@@ -10,7 +10,7 @@ public class Team {
     }
 
     protected void showResults(){
-        System.out.println("Results:");
+        System.out.println("Results for the whole team " + name + ":");
         for (Competitor c : competitors) {
             if (c.isOnDistance()) {
                 System.out.println(c.getName() + " WIN");
@@ -23,4 +23,5 @@ public class Team {
     public Competitor[] getCompetitors() {
         return competitors;
     }
+
 }

@@ -23,13 +23,17 @@ public class MainClass {
 //                System.out.println(c.getName() + " LOSE");
 //            }
 //        }
-        Team team = ("DreamTeam",{new Human("Bob"),
+
+        Competitor [] competitors = {new Human("Bob"),
                 new Cat("Barsik"),
                 new Dog("Bobik"),
-                new Deer("Bamby")}
-                );
-        Course course = {new Cross(300), new Wall(25), new Cross(400)};
+                new Deer("Bamby")};
+
+        Team team = new Team("DreamTeam", competitors);
+        Obstacle [] obstacles = {new Cross(300), new Wall(25), new Water(400)};
+        Course course = new Course(obstacles);
 
         course.doIt(team);
+        team.showResults();
     }
 }
