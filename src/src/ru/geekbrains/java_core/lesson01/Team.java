@@ -2,7 +2,7 @@ package ru.geekbrains.java_core.lesson01;
 
 public class Team {
     protected String name;
-    protected Competitor [] competitors;
+    protected Competitor [] competitors = new Competitor[4];
 
     public Team(String name, Competitor[] competitors) {
         this.name = name;

@@ -23,6 +23,10 @@ public class MainClass {
 //                System.out.println(c.getName() + " LOSE");
 //            }
 //        }
-        Team team = new Team({new Human("Bob"), new Cat("Barsik"), new Dog("Bobik")});
+        Team team = new Team("DreamTeam",{new Human("Bob"),
+                new Cat("Barsik"),
+                new Dog("Bobik"),
+                new Deer("Bamby")}
+                );
     }
 }
