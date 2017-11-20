@@ -20,7 +20,16 @@ public class Team {
         }
     }
 
-    public Competitor[] getCompetitors() {
+    protected void showWinners() {
+        System.out.println("The winners are:");
+        for (Competitor c : competitors) {
+            if (c.isOnDistance()) {
+                System.out.println(c.getName());
+            }
+        }
+    }
+
+    protected Competitor[] getCompetitors() {
         return competitors;
     }
 
