@@ -2,7 +2,7 @@ package ru.geekbrains.java_core.lesson01;
 
 public class Team {
     protected String name;
-    protected Competitor [] competitors = new Competitor[4];
+    protected Competitor [] competitors;
 
     public Team(String name, Competitor[] competitors) {
         this.name = name;
@@ -18,5 +18,9 @@ public class Team {
                 System.out.println(c.getName() + " LOSE");
             }
         }
+    }
+
+    public Competitor[] getCompetitors() {
+        return competitors;
     }
 }

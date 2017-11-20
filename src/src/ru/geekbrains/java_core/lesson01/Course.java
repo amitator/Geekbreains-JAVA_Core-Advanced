@@ -7,8 +7,8 @@ public class Course {
         this.obstacles = obstacles;
     }
 
-    public void doIt(Competitor [] competitors){
-        for (Competitor c : competitors) {
+    public void doIt(Team team){
+        for (Competitor c : team.getCompetitors()) {
             for (Obstacle o : obstacles) {
                 o.doIt(c);
                 if (!c.isOnDistance()) {
