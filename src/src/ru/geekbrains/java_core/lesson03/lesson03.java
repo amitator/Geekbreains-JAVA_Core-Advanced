@@ -11,15 +11,19 @@ public class lesson03 {
 
         Set<String> set = new TreeSet<>(Arrays.asList(arr));
         Map<String, Integer> map = new HashMap<>();
-        int counter;
+//        int counter;
 
-        for (int i = 0; i < arr.length - 1; i++) {
-            if (map.containsKey(arr[i])){
-                counter = map.get(arr[i]);
-                map.put(arr[i], ++counter);
-            } else {
-                map.put(arr[i], 1);
-            }
+//        for (int i = 0; i < arr.length - 1; i++) {
+//            if (map.containsKey(arr[i])){
+//                counter = map.get(arr[i]);
+//                map.put(arr[i], ++counter);
+//            } else {
+//                map.put(arr[i], 1);
+//            }
+//        }
+
+        for (String lastName: arr){
+            map.put(lastName, map.getOrDefault(lastName, 0) + 1);
         }
 
         System.out.println(set);

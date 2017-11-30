@@ -13,16 +13,21 @@ public class PhoneBook {
 
         public void add(String lastName, String phone){
             LinkedList<String> linkedList = new LinkedList<>();
-            if (map.containsKey(lastName)){
-                linkedList = map.get(lastName);
-                linkedList.add(phone);
-                map.put(lastName, linkedList);
-            } else {
-                linkedList.add(phone);
-                map.put(lastName, linkedList);
+//            if (map.containsKey(lastName)){
+//                linkedList = map.get(lastName);
+//                linkedList.add(phone);
+//                map.put(lastName, linkedList);
+//            } else {
+////                linkedList.add(phone);
+////                map.put(lastName, linkedList);
+//                map.get(lastName).add(phone);
+//            }
+
+
+            if (!map.containsKey(lastName)){
+                map.put(lastName, new LinkedList<>());
             }
-
-
+            map.get(lastName).add(phone);
 
         }
 
